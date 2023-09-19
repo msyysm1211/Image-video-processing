@@ -152,6 +152,7 @@ public class ImageDisplay {
                 int gap_y=intput_value_Y;
                 for (int j = 0; j < weight - intput_value_Y; j += intput_value_Y) {
                     for (int k = j + 1; k < j + intput_value_Y; k++) {
+                      //  YUVmatrix[i][k].Y = (YUVmatrix[i][j].Y + YUVmatrix[i][j + intput_value_Y].Y) / 2;
                         YUVmatrix[i][k].Y = (YUVmatrix[i][j].Y *(intput_value_Y-(k-j)) + YUVmatrix[i][j + intput_value_Y].Y*(k-j)) / gap_y;
                     }
                 }
@@ -163,6 +164,7 @@ public class ImageDisplay {
                 int gap_u=intput_value_U;
                 for (int j = 0; j < weight - intput_value_U; j += intput_value_U) {
                     for (int k = j + 1; k < j + intput_value_U; k++) {
+                        //YUVmatrix[i][k].U = (YUVmatrix[i][j].U + YUVmatrix[i][j + intput_value_U].U) / 2;
                         YUVmatrix[i][k].U = (YUVmatrix[i][j].U *(intput_value_U-(k-j)) + YUVmatrix[i][j + intput_value_U].U*(k-j)) / gap_u;
                     }
                 }
@@ -174,6 +176,7 @@ public class ImageDisplay {
                 int gap_v=intput_value_V;
                 for (int j = 0; j < weight - intput_value_V; j += intput_value_V) {
                     for (int k = j + 1; k < j + intput_value_V; k++) {
+                       // YUVmatrix[i][k].V = (YUVmatrix[i][j].V + YUVmatrix[i][j + intput_value_V].V) / 2;
                         YUVmatrix[i][k].V = (YUVmatrix[i][j].V *(intput_value_V-(k-j)) + YUVmatrix[i][j + intput_value_V].V*(k-j)) / gap_v;
                     }
                 }
